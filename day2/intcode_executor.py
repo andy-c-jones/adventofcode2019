@@ -29,3 +29,17 @@ def restore_from_before_fire_and_execute(memory : [int]):
     memory[2] = 2
     return execute(memory)
 
+def set_noun_and_verb_and_execute(memory :[int], noun :int, verb :int):
+    memory[1] = noun
+    memory[2] = verb
+    return execute(memory)
+
+def day_two_solution(memory :[int]):
+    for n in range(0, 99):
+        for v in range(0, 99):
+            try:
+                if(set_noun_and_verb_and_execute(memory.copy(), n, v)[0] == 19690720):
+                    return [n, v]
+            except:
+                "noop"
+    return "something went wrong"
