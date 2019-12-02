@@ -12,20 +12,20 @@ def operation(v):
         }
     return operations.get(v, "Invalid operation")
 
-def execute(command : [int]):
-    execution_pointer = 0
-    while command[execution_pointer] != 99:
-        op = operation(command[execution_pointer])
-        positionOfFirstOpperand = command[execution_pointer + 1]
-        positionOfSecondOpperand = command[execution_pointer + 2]
-        resultOfOpperation = op(command[positionOfFirstOpperand], command[positionOfSecondOpperand])
-        locationOfResult = command[execution_pointer + 3]
-        command[locationOfResult] = resultOfOpperation
-        execution_pointer = execution_pointer + 4
-    return command
+def execute(memory : [int]):
+    instruction_pointer = 0
+    while memory[instruction_pointer] != 99:
+        op = operation(memory[instruction_pointer])
+        address_of_first_parameter = memory[instruction_pointer + 1]
+        address_of_second_parameter = memory[instruction_pointer + 2]
+        operation_result = op(memory[address_of_first_parameter], memory[address_of_second_parameter])
+        result_address = memory[instruction_pointer + 3]
+        memory[result_address] = operation_result
+        instruction_pointer = instruction_pointer + 4
+    return memory
 
-def restore_from_before_fire_and_execute(command : [int]):
-    command[1] = 12
-    command[2] = 2
-    return execute(command)
+def restore_from_before_fire_and_execute(memory : [int]):
+    memory[1] = 12
+    memory[2] = 2
+    return execute(memory)
 
