@@ -1,7 +1,7 @@
-from day2.intcode_executor import execute
-from day2.intcode_executor import restore_from_before_fire_and_execute
-from day2.intcode_executor import set_noun_and_verb_and_execute
-from day2.intcode_executor import day_two_solution
+from src.day2.intcode_executor import execute
+from src.day2.intcode_executor import restore_from_before_fire_and_execute
+from src.day2.intcode_executor import set_noun_and_verb_and_execute
+from src.day2.intcode_executor import day_two_solution
 import unittest
 
 class TestIntcodeExecutor(unittest.TestCase):

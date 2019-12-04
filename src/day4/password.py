@@ -16,4 +16,3 @@ def is_valid_password_part_2(n):
     has_pair = any(a != b == c != d for a, b, c, d in zip(sp, sp[1:], sp[2:], sp[3:]))
     goes_up = all(a <= b for a, b in zip(s, s[1:]))
     return has_pair and goes_up
-    

@@ -1,6 +1,6 @@
 import unittest
-from day1.module import Module
-from day1.spacecraft import Spacecraft
+from src.day1.module import Module
+from src.day1.spacecraft import Spacecraft
 from functools import reduce
 
 class TestSpacecraft(unittest.TestCase):

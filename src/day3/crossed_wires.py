@@ -5,7 +5,6 @@ def parse(wire):
         distance = int(move[1:])
         yield directions[direction], distance
 
-
 def coordinates_wire_covers(wire):
     x, y = 0, 0
     for (dx, dy), distance in parse(wire):

@@ -1,5 +1,5 @@
-from day1.module import Module
-from day1.fuel import fuel_required_to_launch
+from module import Module
+from fuel import fuel_required_to_launch
 from functools import reduce
 
 class Spacecraft():

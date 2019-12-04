@@ -1,4 +1,4 @@
-from day1.fuel import fuel_required_to_launch
+from fuel import fuel_required_to_launch
 
 class Module:
     def __init__(self, mass):

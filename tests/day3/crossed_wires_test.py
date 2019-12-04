@@ -1,4 +1,4 @@
-from day3.crossed_wires import *
+from src.day3.crossed_wires import *
 import unittest
 
 class TestCrossedWires(unittest.TestCase):

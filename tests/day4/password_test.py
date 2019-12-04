@@ -1,4 +1,4 @@
-from day4.password import find_password_in_range, find_password_in_range_part2
+from src.day4.password import find_password_in_range, find_password_in_range_part2
 import unittest
 
 class TestPasswordPuzzle(unittest.TestCase):
