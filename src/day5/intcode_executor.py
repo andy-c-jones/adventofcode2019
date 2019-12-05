@@ -63,7 +63,7 @@ class IntCode:
         instruction = self.next_instruction()
         opcode = Op(instruction % 100)
         self.modes = instruction // 100
-        op = operation(opcode)
+        op = self.operation(opcode)
         if op() == False:
             return False
         return True
