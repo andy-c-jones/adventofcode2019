@@ -48,11 +48,11 @@ class IntCode:
             Op.JUMP_IF_TRUE: lambda: (
                 val := self.get_parameter_value(),
                 where := self.get_parameter_value(),
-                self.instruction_pointer := where if val != 0 else True),
+                setattr(self, 'instruction_pointer', where) if val != 0 else True),
             Op.JUMP_IF_FALSE: lambda: (
                 val := self.get_parameter_value(),
                 where := self.get_parameter_value(),
-                self.instruction_pointer := where if val == 0 else True),
+                setattr(self, 'instruction_pointer', where) if val == 0 else True),
             Op.EQUALS: lambda: self.set_at_parameter(int(self.get_parameter_value() == self.get_parameter_value())),
             Op.LESS_THAN: lambda: self.set_at_parameter(int(self.get_parameter_value() < self.get_parameter_value())),
             Op.STOP: lambda: False
